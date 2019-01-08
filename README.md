@@ -3,7 +3,7 @@ A RESTful service which awaits POST request at the 80 port, and responds with th
 
 The service is packed inside docker image which is build with gradle.
 
-_Prerequisites:_**
+**_Prerequisites:_**
 ```
 Java JDK or JRE version >= 7
 ```
