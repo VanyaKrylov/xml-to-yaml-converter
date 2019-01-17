@@ -1,5 +1,8 @@
 from flask import Flask, request
 import xmltodict
+#import ruamel.yaml
+import sys
+import json, simplejson
 import yaml
 
 """@package docstring
@@ -7,6 +10,8 @@ Documentation for the xml-to-yaml service
 The service uses RESTful API and receives POST requests with xml
 It sends the same data but in YAML format
 """
+
+
 
 """
 Creating the main app
@@ -25,7 +30,9 @@ def convert():
     YAML message
     """
     d = xmltodict.parse(request.data)
-    return yaml.dump(d, default_flow_style=False), 201
+    j = json.dumps(d)
+    return yaml.dump(simplejson.loads(j), default_flow_style=False), 201
+
 
 
 """

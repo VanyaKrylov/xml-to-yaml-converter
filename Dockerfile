@@ -7,5 +7,6 @@ RUN pip3 install --upgrade setuptools
 RUN pip3 install Flask==0.10.1
 RUN pip3 install xmltodict==0.11.0
 RUN pip3 install PyYAML==3.13
+RUN pip3 install simplejson==3.8.1
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
