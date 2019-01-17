@@ -17,7 +17,7 @@ The command calls the **buildImage** Gradle task and automatically uses Gradle v
 
 To run the service use command:
 ```
-docker run -p 8080:80 [image_id]
+docker run -p 8080:80 ivan/myimage
 ```
 
 Test curl request example:
